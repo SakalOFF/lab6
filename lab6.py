@@ -2,7 +2,10 @@ import random
 from scipy.stats import f, t
 from prettytable import PrettyTable
 import numpy as np
+import time
 
+
+star_time = time.perf_counter()
 x1min = 10
 x1max = 50
 x2min = -20
@@ -225,3 +228,5 @@ while True:
             break
         if flag:
             break
+
+print("\nЧас виконання програми: {:.7f} c".format(time.perf_counter() - star_time))
